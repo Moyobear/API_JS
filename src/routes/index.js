@@ -1,9 +1,25 @@
 const { Router } = require("express");
-// Importar todos los routers;
+// *importar todos los routers:
+const agenteInmobiliarioRouter = require("./agenteInmobiliarioRouter.js");
+const sucursalRouter = require("./sucursalRouter.js");
+const tipoRouter = require("./tipoRouter.js");
+const inmuebleRouter = require("./inmuebleRouter.js");
+const contratoRouter = require("./contratoRouter.js");
+const documentosFisicosRouter = require("./documentosFisicosRouter.js");
+const documentosDigitalesRouter = require("./documentosDigitalesRouter.js");
+const propietarioRouter = require("./propietarioRouter.js");
+const imagenesInmuebleRouter = require("./imagenesInmuebleRouter.js");
 
 const router = Router();
 
-// Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
-
+// *Configurar los routers
+router.use("/agenteInmobiliario", agenteInmobiliarioRouter);
+router.use("/sucursal", sucursalRouter);
+router.use("/tipo", tipoRouter);
+router.use("/inmueble", inmuebleRouter);
+router.use("/contrato", contratoRouter);
+router.use("/documentosFisicos", documentosFisicosRouter);
+router.use("/documentosDigitales", documentosDigitalesRouter);
+router.use("/propietario", propietarioRouter);
+routeruse("/imagenesInmueble", imagenesInmuebleRouter);
 module.exports = router;

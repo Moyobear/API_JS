@@ -22,6 +22,14 @@ module.exports = (sequelize) => {
         type: DataTypes.BIGINT,
         allowNull: false,
       },
+      imagen: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      acronimo: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       borrado: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
