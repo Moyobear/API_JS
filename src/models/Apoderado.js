@@ -15,15 +15,15 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       ci: {
-        type: DataTypes.BIGINT,
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       telf_hab: {
-        type: DataTypes.BIGINT,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       telf_cel: {
-        type: DataTypes.BIGINT,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       parentezco: {

@@ -9,7 +9,7 @@ const {
   borrarSucursalHandler,
   eliminarSucursalHandler,
   buscarSucursalesAdministracionHandler,
-} = require("../handlers/sucursalHandlers.js");
+} = require("../../handlers/sucursalHandlers.js");
 // *importamos los middlewares de sucursal:
 
 // *definimos el router de sucursal:

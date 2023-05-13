@@ -101,7 +101,7 @@ const reasignarAgenteHandler = async (req, res) => {
   try {
     const { idInmueble, idNuevoAgente } = req.body;
     const request = await reasignarAgente(idInmueble, idNuevoAgente);
-    return res.status(200).json(request);
+    return res.status(201).json(request);
   } catch (error) {
     return res.status(400).json({ error: error.message });
   }

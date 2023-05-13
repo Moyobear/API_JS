@@ -67,7 +67,7 @@ const buscarAgenteId = async (idAgente) => {
     ],
   });
   if (request && request.borrado === false) {
-    return [request];
+    return request;
   } else {
     return "No existe Agente con ese id";
   }
@@ -122,7 +122,7 @@ const actualizarAgente = async (idAgente, telf_hab, telf_cel, email) => {
     email: email,
   });
   await request.save();
-  return [request];
+  return request;
 };
 
 const contraseniaAgente = async (idAgente, contrasenia) => {

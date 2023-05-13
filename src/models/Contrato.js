@@ -11,7 +11,7 @@ module.exports = (sequelize) => {
         unique: true,
       },
       duracion: {
-        type: DataTypes.BIGINT,
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       precio_venta: {
