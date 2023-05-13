@@ -14,9 +14,12 @@ propietarioRouter.get(
   getPropietariosAdministracionHandler
 );
 
+propietarioRouter.get("/cedula", getPropietarioCedulaHandler);
+
 propietarioRouter.get("/:id", getPropietariosIdHandler);
 
-propietarioRouter.post("/nuevo", crearPropietariosHandler);
+// ?esta ruta permite crear un nuevo propietario y reasignarselo a un inmueble existente
+propietarioRouter.post("/reasignarPropietario", reasignarPropietarioHandler);
 
 propietarioRouter.put("/editar", editarPropietariosHandler);
 

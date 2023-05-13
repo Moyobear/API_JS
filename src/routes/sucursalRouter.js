@@ -1,25 +1,35 @@
 const { Router } = require("express");
 // *importamos los handlers de sucursal:
-
+const {
+  buscarSucursalesHandler,
+  buscarSucursalIdHandler,
+  crearSucursalHandler,
+  editarSucursalHandler,
+  reasignarSucursalHandler,
+  borrarSucursalHandler,
+  eliminarSucursalHandler,
+  buscarSucursalesAdministracionHandler,
+} = require("../handlers/sucursalHandlers.js");
 // *importamos los middlewares de sucursal:
 
 // *definimos el router de sucursal:
 const sucursalRouter = Router();
 
 // *creamos las rutas de sucursal:
-sucursalRouter.get("/", getSucursalHandler);
+sucursalRouter.get("/", buscarSucursalesHandler);
 
-sucursalRouter.get("/:id", getSucursalIdHandler);
+sucursalRouter.get("/administracion", buscarSucursalesAdministracionHandler);
+
+sucursalRouter.get("/:idSucursal", buscarSucursalIdHandler);
 
 sucursalRouter.post("/nuevo", crearSucursalHandler);
 
-// ?ruta auxiliar para crear registros masivos:
-sucursalRouter.post("/bulkCreateSucursal", bulkCreateSucursalHandler);
-
 sucursalRouter.put("/editar", editarSucursalHandler);
 
-sucursalRouter.delete("/borrado", borrarSucursalHandler);
+sucursalRouter.put("/reasignarSucursal", reasignarSucursalHandler);
 
-sucursalRouter.delete("/eliminar", eliminarSucursalHandler);
+sucursalRouter.delete("/borrado/:idSucursal", borrarSucursalHandler);
+
+sucursalRouter.delete("/:idSucursal/eliminar", eliminarSucursalHandler);
 
 module.exports = sucursalRouter;

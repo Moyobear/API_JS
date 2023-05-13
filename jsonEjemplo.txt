@@ -1,0 +1,35 @@
+AgenteInmobiliario = [
+    {
+        "nombre_apellido": "Jonathan Rodriguez",
+        "ci": 15831786,
+        "rol": "Agente Inmobiliario",
+        "telf_hab": 2448596587,
+        "telf_cel": 4243669000,
+        "email": "rodriguezjmm@hotmail.com",
+        "contrasenia": "bearfreelance",
+        "nacionalidad": "Venezolano",
+        "admin": false
+    },
+    {
+        "nombre_apellido": "William Silva",
+        "ci": 6589745,
+        "rol": "Sub Gerente",
+        "telf_hab": 2436958745,
+        "telf_cel": 4243624587,
+        "email": "wsilva@hotmail.com",
+        "contrasenia": "williamsilva",
+        "nacionalidad": "Venezolano",
+        "admin": true
+    },
+    {
+        "nombre_apellido": "Juan DoSantos",
+        "ci": 12475896,
+        "rol": "Gerente General",
+        "telf_hab": 2435874596,
+        "telf_cel": 4129632584,
+        "email": "juandosantos@hotmail.com",
+        "contrasenia": "elgordoportu",
+        "nacionalidad": "Portugues",
+        "admin": true
+    },
+]

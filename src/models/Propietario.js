@@ -10,11 +10,7 @@ module.exports = (sequelize) => {
         autoIncrement: true,
         unique: true,
       },
-      nombre: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      apellido: {
+      nombre_apellido: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -52,6 +48,10 @@ module.exports = (sequelize) => {
       nacionalidad: {
         type: DataTypes.STRING,
         allowNull: false,
+      },
+      propietario_actual: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true,
       },
       borrado: {
         type: DataTypes.BOOLEAN,

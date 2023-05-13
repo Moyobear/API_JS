@@ -1,27 +1,44 @@
 const { Router } = require("express");
 // *importamos los handlers de agenteInmobiliario:
-
+const {
+  buscarNombresAgentesHandler,
+  buscarAgentesAdministracionHandler,
+  buscarAgentesHandler,
+  buscarAgenteIdHandler,
+  crearAgenteHandler,
+  actualizarAgenteHandler,
+  contraseniaAgenteHandler,
+  reasignarAgenteHandler,
+  borrarAgenteHandler,
+  eliminarAgenteHandler,
+} = require("../handlers/agenteInmobiliarioHandler.js");
 // *importamos los middlewares de agenteInmobiliario:
 
 // *definimos el router de agenteInmobiliario:
 const agenteInmobiliarioRouter = Router();
 
 // *creamos las rutas de agenteInmobiliario:
-agenteInmobiliarioRouter.get("/", getAgentesHandler);
+agenteInmobiliarioRouter.get("/", buscarAgentesHandler); //?Probada
 
-agenteInmobiliarioRouter.get("/nombres", getNombresAgentesHandler);
+agenteInmobiliarioRouter.get(
+  "/administracion",
+  buscarAgentesAdministracionHandler
+); //?Probada
 
-agenteInmobiliarioRouter.get("/:id", getAgenteIdHandler);
+agenteInmobiliarioRouter.get("/nombres", buscarNombresAgentesHandler); //?Probada
 
-agenteInmobiliarioRouter.post("/nuevo", crearAgenteHandler);
+agenteInmobiliarioRouter.get("/:idAgente", buscarAgenteIdHandler); //?Probada
 
-// ?ruta auxiliar para crear registros masivos
-agenteInmobiliarioRouter.post("/bulkCreateAgentes", bulkCreateAgentesHandler);
+agenteInmobiliarioRouter.post("/nuevo", crearAgenteHandler); //?Probada
 
-agenteInmobiliarioRouter.put("/editar", editarAgenteHandler);
+agenteInmobiliarioRouter.put("/actualizar", actualizarAgenteHandler); //?Probada
 
-agenteInmobiliarioRouter.delete("/borrado", borrarAgenteHandler);
+agenteInmobiliarioRouter.put("/contrasenia", contraseniaAgenteHandler); //?Probada
 
-agenteInmobiliarioRouter.delete("/eliminar", eliminarAgenteHandler);
+agenteInmobiliarioRouter.put("/reasignarAgente", reasignarAgenteHandler);
+
+agenteInmobiliarioRouter.delete("/borrado/:idAgente", borrarAgenteHandler); //?Probada
+
+agenteInmobiliarioRouter.delete("/:idAgente/eliminar", eliminarAgenteHandler); //?Probada
 
 module.exports = agenteInmobiliarioRouter;
