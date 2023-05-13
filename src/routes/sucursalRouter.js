@@ -16,20 +16,20 @@ const {
 const sucursalRouter = Router();
 
 // *creamos las rutas de sucursal:
-sucursalRouter.get("/", buscarSucursalesHandler);
+sucursalRouter.get("/", buscarSucursalesHandler); // ?Probada
 
-sucursalRouter.get("/administracion", buscarSucursalesAdministracionHandler);
+sucursalRouter.get("/administracion", buscarSucursalesAdministracionHandler); // ?Probada
 
-sucursalRouter.get("/:idSucursal", buscarSucursalIdHandler);
+sucursalRouter.get("/:idSucursal", buscarSucursalIdHandler); // ?Probada
 
-sucursalRouter.post("/nuevo", crearSucursalHandler);
+sucursalRouter.post("/nueva", crearSucursalHandler); // ?Probada
 
 sucursalRouter.put("/editar", editarSucursalHandler);
 
-sucursalRouter.put("/reasignarSucursal", reasignarSucursalHandler);
+sucursalRouter.put("/reasignarSucursal", reasignarSucursalHandler); // ?Probada
 
-sucursalRouter.delete("/borrado/:idSucursal", borrarSucursalHandler);
+sucursalRouter.delete("/borrado/:idSucursal", borrarSucursalHandler); // ?Probada
 
-sucursalRouter.delete("/:idSucursal/eliminar", eliminarSucursalHandler);
+sucursalRouter.delete("/:idSucursal/eliminar", eliminarSucursalHandler); // ?Probada
 
 module.exports = sucursalRouter;

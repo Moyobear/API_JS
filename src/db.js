@@ -98,10 +98,6 @@ const {
 } = sequelize.models;
 
 // !Relaciones 1 a 1:
-// ?Sucursal vs Intermediacion
-Sucursal.hasOne(Intermediacion);
-Intermediacion.belongsTo(Sucursal);
-
 // ?Inmueble vs Contrato
 Inmueble.hasOne(Contrato);
 Contrato.belongsTo(Inmueble);
@@ -131,6 +127,10 @@ Propietario.hasOne(Apoderado);
 Apoderado.belongsTo(Propietario);
 
 // !Relaciones 1 a N:
+// ?Sucursal vs Intermediacion
+Sucursal.hasMany(Intermediacion);
+Intermediacion.belongsTo(Sucursal);
+
 // ?Sucursal vs AgenteInmobiliario
 Sucursal.hasMany(AgenteInmobiliario);
 AgenteInmobiliario.belongsTo(Sucursal);

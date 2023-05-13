@@ -1,5 +1,6 @@
 AgenteInmobiliario = [
     {
+        "idSucursal": 1,
         "nombre_apellido": "Jonathan Rodriguez",
         "ci": 15831786,
         "rol": "Agente Inmobiliario",
@@ -11,6 +12,7 @@ AgenteInmobiliario = [
         "admin": false
     },
     {
+        "idSucursal": 3,
         "nombre_apellido": "William Silva",
         "ci": 6589745,
         "rol": "Sub Gerente",
@@ -22,6 +24,7 @@ AgenteInmobiliario = [
         "admin": true
     },
     {
+        "idSucursal": 1,
         "nombre_apellido": "Juan DoSantos",
         "ci": 12475896,
         "rol": "Gerente General",
@@ -32,4 +35,33 @@ AgenteInmobiliario = [
         "nacionalidad": "Portugues",
         "admin": true
     },
+    {
+        "idSucursal": 3,
+        "nombre_apellido": "Octavio Mendez",
+        "ci": 14965874,
+        "rol": "Administrador",
+        "telf_hab": 2125846321,
+        "telf_cel": 4149584263,
+        "email": "octaviom@hotmail.com",
+        "contrasenia": "supergordo",
+        "nacionalidad": "Venezolano",
+        "admin": true
+    },
+]
+
+Sucursal =[
+{
+    "sucursal": "JS Plaza",
+    "direccion": "Centro Comercial Plaza, Maracay",
+	"telefono": 2445824987,
+	"imagen": "https://cdn1.goibibo.com/voy_ing/t_g/8c26457000b511eaa1cc0242ac110003.jpg?downsize=431:230",
+	"acronimo": "JSP"
+},
+{
+    "sucursal": "JS Calicanto",
+    "direccion": "Urbanización Calicanto, Maracay",
+	"telefono": 2445874874,
+	"imagen": "https://img10.naventcdn.com/avisos/13/00/51/28/79/45/1200x1200/42353106.jpg",
+	"acronimo": "JSC"
+},
 ]

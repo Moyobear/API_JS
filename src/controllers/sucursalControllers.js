@@ -73,14 +73,47 @@ const crearSucursal = async (
 const editarSucursal = async (idSucursal, telefono, imagen) => {
   const request = await Sucursal.findByPk(idSucursal);
   await request.set({
-    telefono,
-    imagen,
+    telefono: telefono,
+    imagen: imagen,
   });
   await request.save();
   return [request];
 };
 
-const reasignarSucursal = async (idSucursal, idSucursalNueva) => {};
+const reasignarSucursal = async (idSucursal, idSucursalNueva) => {
+  const viejaSucursal = await Sucursal.findByPk(idSucursal, {
+    include: [
+      {
+        model: Propietario,
+      },
+      {
+        model: AgenteInmobiliario,
+      },
+      {
+        model: Intermediacion,
+      },
+      {
+        model: Inmueble,
+      },
+    ],
+  });
+  const nuevaSucursal = await Sucursal.findByPk(idSucursalNueva);
+  const propietarios = viejaSucursal.propietarios;
+  const agentesInmobiliarios = viejaSucursal.agenteInmobiliarios;
+  const intermediaciones = viejaSucursal.intermediaciones;
+  const inmuebles = viejaSucursal.inmuebles;
+
+  //   await propietarios.forEach(function (item) {
+  //     nuevaSucursal.addPropietarios(item);
+  //     nuevaSucursal.save();
+  //   });
+
+  await agentesInmobiliarios.forEach(function (item) {
+    nuevaSucursal.addAgenteInmobiliario(item);
+    nuevaSucursal.save();
+  });
+  return "Reasignacion exitosa";
+};
 
 const borrarSucursal = async (idSucursal) => {
   const request = await Sucursal.findByPk(idSucursal);

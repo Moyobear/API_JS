@@ -104,13 +104,14 @@ const crearAgente = async (
     nacionalidad,
     admin,
   });
-  //   const requestSucursal = await Sucursal.findByPk(idSucursal);
-  //   await requestSucursal.addAgenteInmobiliario(requestAgente);
-  //   return {
-  //     message: `El registro del Agente se ha creado exitosamente con la agencia ${requestSucursal.sucursal}`,
-  //     requestAgente,
-  //   };
-  return requestAgente;
+  const requestSucursal = await Sucursal.findByPk(idSucursal);
+  requestSucursal.addAgenteInmobiliario(requestAgente);
+  await requestSucursal.save();
+
+  return {
+    message: `El registro del Agente se ha creado exitosamente con la agencia ${requestSucursal.sucursal}`,
+    requestAgente,
+  };
 };
 
 const actualizarAgente = async (idAgente, telf_hab, telf_cel, email) => {

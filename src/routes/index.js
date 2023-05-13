@@ -1,7 +1,7 @@
 const { Router } = require("express");
 // *importar todos los routers:
 const agenteInmobiliarioRouter = require("./agenteInmobiliarioRouter.js");
-// const sucursalRouter = require("./sucursalRouter.js");
+const sucursalRouter = require("./sucursalRouter.js");
 // const tipoRouter = require("./tipoRouter.js");
 // const inmuebleRouter = require("./inmuebleRouter.js");
 // const contratoRouter = require("./contratoRouter.js");
@@ -14,7 +14,7 @@ const router = Router();
 
 // *Configurar los routers
 router.use("/agenteInmobiliario", agenteInmobiliarioRouter);
-// router.use("/sucursal", sucursalRouter);
+router.use("/sucursal", sucursalRouter);
 // router.use("/tipo", tipoRouter);
 // router.use("/inmueble", inmuebleRouter);
 // router.use("/contrato", contratoRouter);
