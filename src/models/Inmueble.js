@@ -66,7 +66,11 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      estatus: {
+      visible: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+      },
+      destacado: {
         type: DataTypes.BOOLEAN,
         defaultValue: false,
       },
