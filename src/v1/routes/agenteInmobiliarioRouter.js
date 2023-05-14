@@ -29,28 +29,31 @@ const agenteInmobiliarioRouter = Router();
  *          description: Nombre y apellido del Agente Inmobiliario
  *        ci:
  *          type: integer
- *          description: cédula de identidad del Agente Inmobiliario
+ *          description: Cédula de identidad del Agente Inmobiliario
  *        rol:
  *          type: string
- *          description: cargo que ocupará, por ejemplo gerente, agente, administrador
+ *          description: Cargo que ocupará, por ejemplo gerente, agente, administrador
  *        telf_hab:
  *          type: string
- *          description: número telefónico de casa
+ *          description: Número telefónico de casa
  *        telf_cel:
  *          type: string
- *          description: número celular
+ *          description: Número celular
  *        email:
  *          type: string
- *          description: correo electrónico del agente
+ *          description: Correo electrónico del agente
  *        contrasenia:
  *          type: string
- *          description: contraseña
+ *          description: Contraseña
  *        nacionalidad:
  *          type: integer
- *          description: nacionalidad de la persona
+ *          description: Nacionalidad de la persona
  *        admin:
  *          type: boolean
- *          description: indica si es usuario administrador o no
+ *          description: Indica si es usuario administrador o no
+ *        borrado:
+ *          type: boolean
+ *          description: Atributo que permite realizar un borrado lógico del registro
  *      required:
  *        - nombre_apellido
  *        - ci

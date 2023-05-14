@@ -77,7 +77,7 @@ const editarSucursal = async (idSucursal, telefono, imagen) => {
     imagen: imagen,
   });
   await request.save();
-  return [request];
+  return request;
 };
 
 const reasignarSucursal = async (idSucursal, idSucursalNueva) => {
