@@ -5,6 +5,7 @@ const {
   buscarTipoIdHandler,
   crearTipoHandler,
   eliminarTipoHandler,
+  borrarTipoHandler,
 } = require("../../handlers/tipoInmuebleHandlers.js");
 // *importamos los middlewares de tipoInmueble:
 
@@ -89,6 +90,8 @@ tipoRouter.get("/:id", buscarTipoIdHandler);
  *        description: Tipo de Inmueble crado exitosamente
  */
 tipoRouter.post("/nuevo", crearTipoHandler);
+
+tipoRouter.delete("/borrado/:idTipoInmueble", borrarTipoHandler);
 
 /**
  * @swagger

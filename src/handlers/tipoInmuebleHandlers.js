@@ -3,6 +3,7 @@ const {
   buscarTipoId,
   crearTipo,
   eliminarTipo,
+  borrarTipo
 } = require("../controllers/tipoInmuebleControllers.js");
 
 const buscarTipoHandler = async (req, res) => {
@@ -34,6 +35,16 @@ const crearTipoHandler = async (req, res) => {
   }
 };
 
+const borrarTipoHandler = async (req, res) => {
+  try {
+    const { idTipoInmueble } = req.params;
+    const request = await borrarTipo(idTipoInmueble);
+    return res.status(200).json(request);
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
+}
+
 const eliminarTipoHandler = async (req, res) => {
   try {
     const { idTipoInmueble } = req.params;
@@ -49,4 +60,5 @@ module.exports = {
   buscarTipoIdHandler,
   crearTipoHandler,
   eliminarTipoHandler,
+  borrarTipoHandler
 };

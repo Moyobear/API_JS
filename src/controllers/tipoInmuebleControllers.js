@@ -21,12 +21,21 @@ const crearTipo = async (tipo_inmueble, acronimo) => {
     tipo_inmueble,
     acronimo,
   });
-  return `Tipo de Inmueble crado exitosamente ${request}`;
+  return "Tipo de Inmueble crado exitosamente";
+};
+
+const borrarTipo = async (idTipoInmueble) => {
+  const request = await TipoInmueble.findByPk(idTipoInmueble);
+  await request.set({
+    borrado: true,
+  });
+  await request.save();
+  return "Tipo de Inmueblel borrado exitosamente";
 };
 
 const eliminarTipo = async (idTipoInmueble) => {
   const request = await TipoInmueble.findByPk(idTipoInmueble);
-  request.destry();
+  request.destroy();
   return "Tipo de Inmueblel eliminado exitosamente";
 };
 
@@ -35,4 +44,5 @@ module.exports = {
   buscarTipoId,
   crearTipo,
   eliminarTipo,
+  borrarTipo,
 };
