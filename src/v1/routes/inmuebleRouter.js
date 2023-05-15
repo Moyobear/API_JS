@@ -7,19 +7,15 @@ const { Router } = require("express");
 const inmuebleRouter = Router();
 
 // *creamos las rutas de inmueble:
-inmuebleRouter.get("/inmuebles", getInmueblesClienteHandler);
+inmuebleRouter.get("/", buscarInmueblesClienteHandler);
 
-inmuebleRouter.get(
-  "/inmuebles/administracion",
-  getInmueblesAdministracionHandler
-);
+inmuebleRouter.get("/administracion", buscarInmueblesAdministracionHandler);
+
+inmuebleRouter.get("/sucursal", buscarInmueblesSucursalHandler);
 
 inmuebleRouter.get("/:id", getInmuebleIdHandler);
 
 inmuebleRouter.post("/nuevo", crearInmuebleHandler);
-
-// ?ruta auxiliar para crear registros masivos:
-inmuebleRouter.post("/bulkCreateInmuebles", bulkCreateInmueblesHandler);
 
 inmuebleRouter.put("/editar", editarInmuebleHandler);
 

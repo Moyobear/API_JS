@@ -126,7 +126,7 @@ const borrarSucursal = async (idSucursal) => {
 
 const eliminarSucursal = async (idSucursal) => {
   const request = await Sucursal.findByPk(idSucursal);
-  request.destroy();
+  await request.destroy();
   return "La Sucursal fue eliminada exitosamente";
 };
 

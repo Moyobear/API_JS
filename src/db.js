@@ -18,7 +18,7 @@ const PropietarioModel = require("./models/Propietario");
 const PropietarioSecundarioModel = require("./models/PropietarioSecundario");
 const SectorModel = require("./models/Sector");
 const SucursalModel = require("./models/Sucursal");
-const TipoModel = require("./models/Tipo");
+const TipoInmuebleModel = require("./models/TipoInmueble");
 
 require("dotenv").config();
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_PORT } = process.env;
@@ -48,7 +48,7 @@ PropietarioModel(sequelize);
 PropietarioSecundarioModel(sequelize);
 SectorModel(sequelize);
 SucursalModel(sequelize);
-TipoModel(sequelize);
+TipoInmuebleModel(sequelize);
 
 const basename = path.basename(__filename);
 
@@ -94,7 +94,7 @@ const {
   PropietarioSecundario,
   Sector,
   Sucursal,
-  Tipo,
+  TipoInmueble,
 } = sequelize.models;
 
 // !Relaciones 1 a 1:
@@ -191,10 +191,11 @@ Sector.belongsTo(Ciudad);
 Ciudad.hasMany(Inmueble);
 Inmueble.belongsTo(Ciudad);
 
-// !Relaciones N a N:
 // ?Tipo vs Inmueble
-Inmueble.belongsToMany(Tipo, { through: "TipoInmueble" });
-Tipo.belongsToMany(Inmueble, { through: "TipoInmueble" });
+TipoInmueble.hasMany(Inmueble);
+Inmueble.belongsTo(TipoInmueble);
+
+// !Relaciones N a N:
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');

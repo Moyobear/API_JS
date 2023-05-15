@@ -51,9 +51,6 @@ const agenteInmobiliarioRouter = Router();
  *        admin:
  *          type: boolean
  *          description: Indica si es usuario administrador o no
- *        borrado:
- *          type: boolean
- *          description: Atributo que permite realizar un borrado lógico del registro
  *      required:
  *        - nombre_apellido
  *        - ci

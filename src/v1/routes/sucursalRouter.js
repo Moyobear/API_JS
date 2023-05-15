@@ -37,9 +37,6 @@ const sucursalRouter = Router();
  *        acronimo:
  *          type: string
  *          description: Siglas que se usarán para identificar a la sucursal
- *        borrado:
- *          type: boolean
- *          description: Atributo que permite realizar un borrado lógico del registro
  *      required:
  *        - sucursal
  *        - direccion

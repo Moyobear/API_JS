@@ -6,7 +6,7 @@ const { swaggerDocs: V1SwaggerDocs } = require("../API JS/src/v1/swagger.js");
 
 // Syncing all the models at once.
 conn
-  .sync({ force: false })
+  .sync({ force: true })
   .then(() => {
     app.listen(PORT, () => {
       console.log(`listening at ${PORT}`);
