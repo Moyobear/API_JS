@@ -91,6 +91,23 @@ tipoRouter.get("/:id", buscarTipoIdHandler);
  */
 tipoRouter.post("/nuevo", crearTipoHandler);
 
+/**
+ * @swagger
+ * /tipoInmueble/borrado/{idTipoInmueble}:
+ *  delete:
+ *    summary: Este endpoint permite buscar un tipo de Inmueble por id y aplicar borrado lógico al registro.
+ *    tags: [TipoInmueble]
+ *    parameters:
+ *      - in: path
+ *        name: idTipoInmueble
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: Id del tipo de Inmueble a borrar.
+ *    responses:
+ *      200:
+ *        description: Tipo de Inmueblel borrado exitosamente.
+ */
 tipoRouter.delete("/borrado/:idTipoInmueble", borrarTipoHandler);
 
 /**

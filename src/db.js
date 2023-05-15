@@ -127,6 +127,10 @@ Propietario.hasOne(Apoderado);
 Apoderado.belongsTo(Propietario);
 
 // !Relaciones 1 a N:
+// ?Inmueble vs Contrato
+Inmueble.hasMany(Contrato);
+Contrato.belongsTo(Inmueble);
+
 // ?Sucursal vs Intermediacion
 Sucursal.hasMany(Intermediacion);
 Intermediacion.belongsTo(Sucursal);

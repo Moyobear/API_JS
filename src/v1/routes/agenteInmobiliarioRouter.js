@@ -11,7 +11,7 @@ const {
   reasignarAgenteHandler,
   borrarAgenteHandler,
   eliminarAgenteHandler,
-} = require("../../handlers/agenteInmobiliarioHandler");
+} = require("../../handlers/agenteInmobiliarioHandlers.js");
 // *importamos los middlewares de agenteInmobiliario:
 
 // *definimos el router de agenteInmobiliario:
