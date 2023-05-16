@@ -8,7 +8,7 @@ const intermediacionRouter = require("./intermediacionRouter.js");
 const contratoRouter = require("./contratoRouter.js");
 // const documentosFisicosRouter = require("./documentosFisicosRouter.js");
 // const documentosDigitalesRouter = require("./documentosDigitalesRouter.js");
-// const propietarioRouter = require("./propietarioRouter.js");
+const propietarioRouter = require("./propietarioRouter.js");
 // const imagenesInmuebleRouter = require("./imagenesInmuebleRouter.js");
 
 const router = Router();
@@ -22,6 +22,6 @@ router.use("/intermediacion", intermediacionRouter);
 router.use("/contrato", contratoRouter);
 // router.use("/documentosFisicos", documentosFisicosRouter);
 // router.use("/documentosDigitales", documentosDigitalesRouter);
-// router.use("/propietario", propietarioRouter);
+router.use("/propietario", propietarioRouter);
 // routeruse("/imagenesInmueble", imagenesInmuebleRouter);
 module.exports = router;

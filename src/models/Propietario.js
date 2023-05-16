@@ -24,7 +24,6 @@ module.exports = (sequelize) => {
       },
       telf_ofic: {
         type: DataTypes.STRING,
-        allowNull: false,
       },
       telf_hab: {
         type: DataTypes.STRING,

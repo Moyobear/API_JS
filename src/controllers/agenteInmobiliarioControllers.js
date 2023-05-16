@@ -108,10 +108,7 @@ const crearAgente = async (
   requestSucursal.addAgenteInmobiliario(requestAgente);
   await requestSucursal.save();
 
-  return {
-    message: `El registro del Agente se ha creado exitosamente con la agencia ${requestSucursal.sucursal}`,
-    requestAgente,
-  };
+  return "El registro del Agente Inmobiliario se creó correctamente";
 };
 
 const actualizarAgente = async (idAgente, telf_hab, telf_cel, email) => {
@@ -122,7 +119,7 @@ const actualizarAgente = async (idAgente, telf_hab, telf_cel, email) => {
     email: email,
   });
   await request.save();
-  return request;
+  return "El registro se ha actualizacio correctamente!";
 };
 
 const contraseniaAgente = async (idAgente, contrasenia) => {

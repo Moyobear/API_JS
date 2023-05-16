@@ -152,6 +152,7 @@ agenteInmobiliarioRouter.get("/:idAgente", buscarAgenteIdHandler); //?Probada
  *    tags: [AgenteInmobiliario]
  *    requestBody:
  *      required: true
+ *      description: Debe recibir por body el idSucursal a la que pertenece, nombre_apellido, ci, rol, telf_hab, telf_cel, email, contrasenia, nacionalidad, y el valor de admin.
  *      content:
  *        application/json:
  *          schema:
@@ -159,7 +160,7 @@ agenteInmobiliarioRouter.get("/:idAgente", buscarAgenteIdHandler); //?Probada
  *            $ref: '#/components/schemas/AgenteInmobiliario'
  *    responses:
  *      201:
- *        description: Devuelve un objeto con dos atributos, message con un mensaje de registro exitoso y requestAgente con los datos del registro creado.
+ *        description: "El registro del Agente Inmobiliario se creó correctamente"
  */
 agenteInmobiliarioRouter.post("/nuevo", crearAgenteHandler); //?Probada
 
@@ -179,7 +180,7 @@ agenteInmobiliarioRouter.post("/nuevo", crearAgenteHandler); //?Probada
  *            $ref: '#/components/schemas/AgenteInmobiliario'
  *    responses:
  *      201:
- *        description: Devuelve un objeto con el registro actualizado
+ *        description: "El registro se ha actualizacio correctamente!"
  */
 agenteInmobiliarioRouter.put("/actualizar", actualizarAgenteHandler); //?Probada
 
