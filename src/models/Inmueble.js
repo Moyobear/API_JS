@@ -18,7 +18,7 @@ module.exports = (sequelize) => {
         type: DataTypes.DATEONLY,
         allowNull: false,
       },
-      dirección: {
+      direccion: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -58,7 +58,7 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      otras_características: {
+      otras_caracteristicas: {
         type: DataTypes.STRING,
         allowNull: false,
       },

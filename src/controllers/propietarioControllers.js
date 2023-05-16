@@ -3,6 +3,11 @@ const {
   Sucursal,
   Inmueble,
   AgenteInmobiliario,
+  PropietarioSecundario,
+  Apoderado,
+  DocumentosDigitales,
+  DocumentosFisicos,
+  CodigoInmueble,
 } = require("../db.js");
 
 const buscarPropietarios = async () => {
@@ -22,6 +27,21 @@ const buscarPropietariosAdministracion = async () => {
       },
       {
         model: AgenteInmobiliario,
+      },
+      {
+        model: PropietarioSecundario,
+      },
+      {
+        model: Apoderado,
+      },
+      {
+        model: DocumentosDigitales,
+      },
+      {
+        model: DocumentosFisicos,
+      },
+      {
+        model: CodigoInmueble,
       },
     ],
   });
@@ -44,6 +64,21 @@ const buscarPropietarioCedula = async (ci) => {
       {
         model: AgenteInmobiliario,
       },
+      {
+        model: PropietarioSecundario,
+      },
+      {
+        model: Apoderado,
+      },
+      {
+        model: DocumentosDigitales,
+      },
+      {
+        model: DocumentosFisicos,
+      },
+      {
+        model: CodigoInmueble,
+      },
     ],
   });
   return request;
@@ -60,6 +95,21 @@ const buscarPropietariosId = async (idPropietario) => {
       },
       {
         model: AgenteInmobiliario,
+      },
+      {
+        model: PropietarioSecundario,
+      },
+      {
+        model: Apoderado,
+      },
+      {
+        model: DocumentosDigitales,
+      },
+      {
+        model: DocumentosFisicos,
+      },
+      {
+        model: CodigoInmueble,
       },
     ],
   });
