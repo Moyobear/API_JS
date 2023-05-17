@@ -45,9 +45,17 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      imagen: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       nacionalidad: {
         type: DataTypes.STRING,
         allowNull: false,
+      },
+      super_user: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
       },
       admin: {
         type: DataTypes.BOOLEAN,

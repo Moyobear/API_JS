@@ -3,7 +3,7 @@ const {
   buscarTipoId,
   crearTipo,
   eliminarTipo,
-  borrarTipo
+  borrarTipo,
 } = require("../controllers/tipoInmuebleControllers.js");
 
 const buscarTipoHandler = async (req, res) => {
@@ -11,7 +11,7 @@ const buscarTipoHandler = async (req, res) => {
     const request = await buscarTipo();
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 
@@ -21,7 +21,7 @@ const buscarTipoIdHandler = async (req, res) => {
     const request = await buscarTipoId(idTipoInmueble);
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 
@@ -41,9 +41,9 @@ const borrarTipoHandler = async (req, res) => {
     const request = await borrarTipo(idTipoInmueble);
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
-}
+};
 
 const eliminarTipoHandler = async (req, res) => {
   try {
@@ -51,7 +51,7 @@ const eliminarTipoHandler = async (req, res) => {
     const request = await eliminarTipo(idTipoInmueble);
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 
@@ -60,5 +60,5 @@ module.exports = {
   buscarTipoIdHandler,
   crearTipoHandler,
   eliminarTipoHandler,
-  borrarTipoHandler
+  borrarTipoHandler,
 };

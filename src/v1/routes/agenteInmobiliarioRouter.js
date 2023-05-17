@@ -45,12 +45,18 @@ const agenteInmobiliarioRouter = Router();
  *        contrasenia:
  *          type: string
  *          description: Contraseña
+ *        imagen:
+ *          type: string
+ *          description: Dirección de la imagen del agente
  *        nacionalidad:
  *          type: integer
  *          description: Nacionalidad de la persona
  *        admin:
  *          type: boolean
  *          description: Indica si es usuario administrador o no
+ *        super_user:
+ *          type: boolean
+ *          description: Indica si es super usuario o no
  *      required:
  *        - nombre_apellido
  *        - ci
@@ -59,6 +65,7 @@ const agenteInmobiliarioRouter = Router();
  *        - telf_cel
  *        - email
  *        - contrasenia
+ *        - imagen
  *        - nacionalidad
  *        - admin
  */
@@ -152,7 +159,7 @@ agenteInmobiliarioRouter.get("/:idAgente", buscarAgenteIdHandler); //?Probada
  *    tags: [AgenteInmobiliario]
  *    requestBody:
  *      required: true
- *      description: Debe recibir por body el idSucursal a la que pertenece, nombre_apellido, ci, rol, telf_hab, telf_cel, email, contrasenia, nacionalidad, y el valor de admin.
+ *      description: Debe recibir por body el idSucursal a la que pertenece, nombre_apellido, ci, rol, telf_hab, telf_cel, email, contrasenia, imagen, nacionalidad, admin y super_user.
  *      content:
  *        application/json:
  *          schema:

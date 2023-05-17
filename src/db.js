@@ -16,7 +16,6 @@ const InmuebleModel = require("./models/Inmueble");
 const IntermediacionModel = require("./models/Intermediacion");
 const PropietarioModel = require("./models/Propietario");
 const PropietarioSecundarioModel = require("./models/PropietarioSecundario");
-const SectorModel = require("./models/Sector");
 const SucursalModel = require("./models/Sucursal");
 const TipoInmuebleModel = require("./models/TipoInmueble");
 
@@ -46,7 +45,6 @@ InmuebleModel(sequelize);
 IntermediacionModel(sequelize);
 PropietarioModel(sequelize);
 PropietarioSecundarioModel(sequelize);
-SectorModel(sequelize);
 SucursalModel(sequelize);
 TipoInmuebleModel(sequelize);
 
@@ -92,7 +90,6 @@ const {
   Intermediacion,
   Propietario,
   PropietarioSecundario,
-  Sector,
   Sucursal,
   TipoInmueble,
 } = sequelize.models;
@@ -182,14 +179,6 @@ Ciudad.belongsTo(Estado);
 // ?Estado vs Inmueble
 Estado.hasMany(Inmueble);
 Inmueble.belongsTo(Estado);
-
-// ?Sector vs Inmueble
-Sector.hasMany(Inmueble);
-Inmueble.belongsTo(Sector);
-
-// ?Ciudad vs Sector
-Ciudad.hasMany(Sector);
-Sector.belongsTo(Ciudad);
 
 // ?Ciudad vs Inmueble
 Ciudad.hasMany(Inmueble);

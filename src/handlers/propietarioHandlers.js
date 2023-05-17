@@ -15,7 +15,7 @@ const buscarPropietariosHandler = async (req, res) => {
     const request = await buscarPropietarios();
     return res.status(200).json(request);
   } catch (error) {
-    return res.satus(400).json({ message: error.message });
+    return res.satus(404).json({ message: error.message });
   }
 };
 
@@ -24,7 +24,7 @@ const buscarPropietariosAdministracionHandler = async (req, res) => {
     const request = await buscarPropietariosAdministracion();
     return res.status(200).json(request);
   } catch (error) {
-    return res.satus(400).json({ message: error.message });
+    return res.satus(404).json({ message: error.message });
   }
 };
 
@@ -34,7 +34,7 @@ const buscarPropietarioCedulaHandler = async (req, res) => {
     const request = await buscarPropietarioCedula(ci);
     return res.status(200).json(request);
   } catch (error) {
-    return res.satus(400).json({ message: error.message });
+    return res.satus(404).json({ message: error.message });
   }
 };
 
@@ -44,7 +44,7 @@ const buscarPropietarioIdHandler = async (req, res) => {
     const request = await buscarPropietariosId(idPropietario);
     return res.status(200).json(request);
   } catch (error) {
-    return res.satus(400).json({ message: error.message });
+    return res.satus(404).json({ message: error.message });
   }
 };
 
@@ -120,7 +120,7 @@ const editarPropietarioHandler = async (req, res) => {
     const request = await editarPropietario(idPropietario, telf_cel, email);
     return res.status(200).json(request);
   } catch (error) {
-    return res.satus(400).json({ message: error.message });
+    return res.satus(404).json({ message: error.message });
   }
 };
 
@@ -130,7 +130,7 @@ const borrarPropietarioHandler = async (req, res) => {
     const request = await borrarPropietario(idPropietario);
     return res.status(200).json(request);
   } catch (error) {
-    return res.satus(400).json({ message: error.message });
+    return res.satus(404).json({ message: error.message });
   }
 };
 
@@ -140,7 +140,7 @@ const eliminarPropietarioHandler = async (req, res) => {
     const request = await eliminarPropietario(idPropietario);
     return res.status(200).json(request);
   } catch (error) {
-    return res.satus(400).json({ message: error.message });
+    return res.satus(404).json({ message: error.message });
   }
 };
 

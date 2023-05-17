@@ -89,6 +89,7 @@ const crearAgente = async (
   telf_cel,
   email,
   contrasenia,
+  imagen,
   nacionalidad,
   admin,
   idSucursal
@@ -101,6 +102,7 @@ const crearAgente = async (
     telf_cel,
     email,
     contrasenia,
+    imagen,
     nacionalidad,
     admin,
   });

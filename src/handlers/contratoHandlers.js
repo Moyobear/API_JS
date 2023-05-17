@@ -10,7 +10,7 @@ const buscarContratosInmuebleHandler = async (req, res) => {
     const request = await buscarContratosInmueble(idInmueble);
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 
@@ -25,7 +25,7 @@ const crearContratoHandler = async (req, res) => {
     );
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 
@@ -35,7 +35,7 @@ const borrarContratoHandler = async (req, res) => {
     const request = await borrarContrato(idContrato);
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 

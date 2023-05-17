@@ -6,7 +6,7 @@ const {
   editarSucursal,
   reasignarSucursal,
   borrarSucursal,
-  eliminarSucursal
+  eliminarSucursal,
 } = require("../controllers/sucursalControllers.js");
 
 const buscarSucursalesHandler = async (req, res) => {
@@ -14,7 +14,7 @@ const buscarSucursalesHandler = async (req, res) => {
     const request = await buscarSucursales();
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 
@@ -23,7 +23,7 @@ const buscarSucursalesAdministracionHandler = async (req, res) => {
     const request = await buscarSucursalesAdministracion();
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 
@@ -33,7 +33,7 @@ const buscarSucursalIdHandler = async (req, res) => {
     const request = await buscarSucursalId(idSucursal);
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 
@@ -79,7 +79,7 @@ const borrarSucursalHandler = async (req, res) => {
     const request = await borrarSucursal(idSucursal);
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 
@@ -89,7 +89,7 @@ const eliminarSucursalHandler = async (req, res) => {
     const request = await eliminarSucursal(idSucursal);
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 

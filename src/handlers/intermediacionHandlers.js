@@ -12,7 +12,7 @@ const buscarIntermediacionHandler = async (req, res) => {
     const request = await buscarIntermediacion();
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 
@@ -21,7 +21,7 @@ const buscarIntermediacionAdminHandler = async (req, res) => {
     const request = await buscarIntermediacionAdmin();
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ message: error.message });
+    return res.status(404).json({ message: error.message });
   }
 };
 
@@ -31,7 +31,7 @@ const buscarIntermediacionIdHandler = async (req, res) => {
     const request = await buscarIntermediacionId(idIntermediacion);
     return res.status(200).json(request);
   } catch (error) {
-    return res.satus(400).json({ message: error.message });
+    return res.satus(404).json({ message: error.message });
   }
 };
 

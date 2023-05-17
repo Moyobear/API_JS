@@ -10,7 +10,7 @@ module.exports = (sequelize) => {
         autoIncrement: true,
         unique: true,
       },
-      codigoInmueble: {
+      codigo_inmueble: {
         type: DataTypes.STRING,
         allowNull: false,
       },

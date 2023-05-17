@@ -20,7 +20,7 @@ const buscarAgentesHandler = async (req, res) => {
       : await buscarTodosAgentes();
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ error: error.message });
+    return res.status(404).json({ error: error.message });
   }
 };
 
@@ -29,7 +29,7 @@ const buscarNombresAgentesHandler = async (req, res) => {
     const request = await buscarNombresAgentes();
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ error: error.message });
+    return res.status(404).json({ error: error.message });
   }
 };
 
@@ -40,7 +40,7 @@ const buscarAgenteIdHandler = async (req, res) => {
     const request = await buscarAgenteId(idAgente);
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ error: error.message });
+    return res.status(404).json({ error: error.message });
   }
 };
 
@@ -54,6 +54,7 @@ const crearAgenteHandler = async (req, res) => {
       telf_cel,
       email,
       contrasenia,
+      imagen,
       nacionalidad,
       admin,
       idSucursal,
@@ -67,6 +68,7 @@ const crearAgenteHandler = async (req, res) => {
       telf_cel,
       email,
       contrasenia,
+      imagen,
       nacionalidad,
       admin,
       idSucursal
@@ -103,7 +105,7 @@ const reasignarAgenteHandler = async (req, res) => {
     const request = await reasignarAgente(idInmueble, idNuevoAgente);
     return res.status(201).json(request);
   } catch (error) {
-    return res.status(400).json({ error: error.message });
+    return res.status(404).json({ error: error.message });
   }
 };
 
@@ -113,7 +115,7 @@ const borrarAgenteHandler = async (req, res) => {
     const request = await borrarAgente(idAgente);
     return res.status(200).json({ message: request });
   } catch (error) {
-    return res.status(400).json({ error: error.message });
+    return res.status(404).json({ error: error.message });
   }
 };
 
@@ -123,7 +125,7 @@ const eliminarAgenteHandler = async (req, res) => {
     const request = await eliminarAgente(idAgente);
     return res.status(200).json({ message: request });
   } catch (error) {
-    return res.status(400).json({ error: error.message });
+    return res.status(404).json({ error: error.message });
   }
 };
 
@@ -132,7 +134,7 @@ const buscarAgentesAdministracionHandler = async (req, res) => {
     const request = await buscarAgentesAdministracion();
     return res.status(200).json(request);
   } catch (error) {
-    return res.status(400).json({ error: error.message });
+    return res.status(404).json({ error: error.message });
   }
 };
 

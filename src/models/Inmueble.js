@@ -56,11 +56,9 @@ module.exports = (sequelize) => {
       },
       observ_inmueble: {
         type: DataTypes.STRING,
-        allowNull: false,
       },
       otras_caracteristicas: {
         type: DataTypes.STRING,
-        allowNull: false,
       },
       operacion: {
         type: DataTypes.STRING,

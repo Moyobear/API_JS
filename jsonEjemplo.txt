@@ -50,18 +50,73 @@ AgenteInmobiliario = [
 ]
 
 Sucursal =[
-{
-    "sucursal": "JS Plaza",
-    "direccion": "Centro Comercial Plaza, Maracay",
-	"telefono": 2445824987,
-	"imagen": "https://cdn1.goibibo.com/voy_ing/t_g/8c26457000b511eaa1cc0242ac110003.jpg?downsize=431:230",
-	"acronimo": "JSP"
-},
-{
-    "sucursal": "JS Calicanto",
-    "direccion": "Urbanización Calicanto, Maracay",
-	"telefono": 2445874874,
-	"imagen": "https://img10.naventcdn.com/avisos/13/00/51/28/79/45/1200x1200/42353106.jpg",
-	"acronimo": "JSC"
-},
+    {
+        "sucursal": "JS Plaza",
+        "direccion": "Centro Comercial Plaza, Maracay",
+        "telefono": 2445824987,
+        "imagen": "https://cdn1.goibibo.com/voy_ing/t_g/8c26457000b511eaa1cc0242ac110003.jpg?downsize=431:230",
+        "acronimo": "JSP"
+    },
+    {
+        "sucursal": "JS Calicanto",
+        "direccion": "Urbanización Calicanto, Maracay",
+        "telefono": 2445874874,
+        "imagen": "https://img10.naventcdn.com/avisos/13/00/51/28/79/45/1200x1200/42353106.jpg",
+        "acronimo": "JSC"
+    },
 ]
+
+EstadosDeVenezuela = [
+    'Amazonas',
+    'Anzoátegui',
+    'Apure',
+    'Aragua',
+    'Barinas',
+    'Bolívar',
+    'Carabobo',
+    'Cojedes',
+    'Delta Amacuro',
+    'Falcón',
+    'Guárico',
+    'Lara',
+    'Mérida',
+    'Miranda',
+    'Monagas',
+    'Nueva Esparta',
+    'Portuguesa',
+    'Sucre',
+    'Táchira',
+    'Trujillo',
+    'La Guaira',
+    'Yaracuy',
+    'Zulia',
+    'Distrito Capital',
+    'Dependencias Federales',
+]
+
+const citiesOfVenezuela = [
+  "Amazonas": ["Puerto Ayacucho", "Atures", "La Esmeralda", "San Fernando de Atabapo"],
+  "Anzoátegui": ["Barcelona", "El Tigre", "Puerto La Cruz", "Anaco", "Boca de Uchire", "Cantaura", "El Chaparro", "El Morro", "Guanta", "Pariaguan", "Píritu", "San Mateo", "Santa Ana de Coro", "Sotillo", "Urica"],
+  "Apure": ["San Fernando de Apure", "Biruaca", "Bruzual", "El Amparo", "Guasdualito", "La Trinidad de Orichuna", "Páez"],
+  "Aragua": ["Maracay", "La Victoria", "Cagua", "Choroní", "Colonia Tovar", "Santa Cruz de Aragua", "Turmero", "La Villa", "Palo Negro", "Santa Rita", "Barbacoas", "El Concejo", "Las Tejerías", "Magdaleno", "Ocumare de la Costa", "San Casimiro", "San Mateo", "San Sebastián", "Tocorón", "Zuata"],
+  "Barinas": ["Barinas", "Barinitas", "Boraure", "Calabozo", "Santa Bárbara", "Socopó"],
+  "Bolívar": ["Ciudad Guayana", "Ciudad Bolívar", "El Callao", "Upata", "Piar"],
+  "Carabobo": ["Valencia", "Naguanagua", "San Diego", "Los Guayos", "Puerto Cabello"],
+  "Cojedes": ["San Carlos", "El Pao", " Tinaquillo", "Lara", "San Carlos de Austria"],
+  "Delta Amacuro": ["Tucupita", "Boca de la Angostura", "Curiapo", "Maturín"],
+  "Distrito Capital": ["Caracas"],
+  "Falcón": ["Coro", "La Vela de Coro", "Punto Fijo", "Santa Ana", "Tocuyo", "Urumaco"],
+  "Guárico": ["San Juan de los Morros", "Calabozo", "Santa María de Ipire", "Tucupido"],
+  "Lara": ["Barquisimeto", "Cabudare", "Duaca", "El Tocuyo", "Quibor"],
+  "Mérida": ["Mérida", "El Vigía", "Santa Elena de Arenales", "Tovar"],
+  "Miranda": ["Los Teques", "Petare", "Guatire", "Guarenas", "Santa Teresa del Tuy", "Cúa", "Charallave"],
+  "Monagas": ["Maturín", "Aguasay", "Caripito", "Temblador", "Uverito"],
+  "Nueva Esparta": ["La Asunción", "Porlamar", "Pampatar", "Juan Griego", "Araya"],
+  "Portuguesa": ["Guanare", "Acarigua", "Araure", "Ospino"],
+  "Sucre": ["Cumaná", "Carúpano", "Maturín", "Icabaru"],
+  "Táchira": ["San Cristóbal", "El Piñal", "La Grita", "San Juan de Colón"],
+  "Trujillo": ["Trujillo", "Boconó", "La Puerta", "Morán"],
+  "Vargas": ["La Guaira", "Macuto", "Catia La Mar", "Maiquetía"],
+  "Yaracuy": ["San Felipe", "Aroa", "Boraure", "Cocorote", "Urachiche"],
+  "Zulia": ["Maracaibo", "Cabimas", "Ciudad Ojeda", "Maracaibo Oeste", "Santa Rita"],
+];
